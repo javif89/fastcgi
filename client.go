@@ -24,8 +24,6 @@ type FCGIClient struct {
 	reqId     uint16
 }
 
-// Do made the request and returns a io.Reader that translates the data read
-// from fcgi responder out of fcgi packet before returning it.
 func (client *FCGIClient) Forward(r *http.Request, root string, script string) (http.Response, error) {
 	req := RequestFromHttp(r)
 	req.Root(root)
