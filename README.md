@@ -56,15 +56,14 @@ in a specific order.
 There's a few important variables we need to send so PHP-FPM knows what
 script to execute, how to execute it, and what the context of the request is.
 
-
-`SERVER_SOFTWARE` = myserver
-`QUERY_STRING` = ex: name=John&page=2 
-`REMOTE_ADDR` = server ip 
-`REQUEST_METHOD` = GET, POST, etc 
-`REQUEST_URI` = /the/path/requested 
-`SERVER_ADDR` = ip or domain name 
-`SERVER_PORT` = port you're serving on 
-`SERVER_NAME` = "localhost" or whatever makes sense to send here
+- `SERVER_SOFTWARE` = myserver
+- `QUERY_STRING` = ex: name=John&page=2 
+- `REMOTE_ADDR` = server ip 
+- `REQUEST_METHOD` = GET, POST, etc 
+- `REQUEST_URI` = /the/path/requested 
+- `SERVER_ADDR` = ip or domain name 
+- `SERVER_PORT` = port you're serving on 
+- `SERVER_NAME` = "localhost" or whatever makes sense to send here
 
 **HTTP Headers**
 
