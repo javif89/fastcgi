@@ -1,0 +1,49 @@
+package fastcgi
+
+type FCGIRecordType uint8
+
+const FCGI_LISTENSOCK_FILENO uint8 = 0
+const FCGI_HEADER_LEN uint8 = 8
+const VERSION_1 uint8 = 1
+const FCGI_NULL_REQUEST_ID uint8 = 0
+const FCGI_KEEP_CONN uint8 = 1
+const doubleCRLF = "\r\n\r\n"
+
+const (
+	FCGI_BEGIN_REQUEST FCGIRecordType = iota + 1
+	FCGI_ABORT_REQUEST
+	FCGI_END_REQUEST
+	FCGI_PARAMS
+	FCGI_STDIN
+	FCGI_STDOUT
+	FCGI_STDERR
+	FCGI_DATA
+	FCGI_GET_VALUES
+	FCGI_GET_VALUES_RESULT
+	FCGI_UNKNOWN_TYPE
+	FCGI_MAXTYPE = FCGI_UNKNOWN_TYPE
+)
+
+const (
+	FCGI_RESPONDER uint8 = iota + 1
+	FCGI_AUTHORIZER
+	FCGI_FILTER
+)
+
+const (
+	FCGI_REQUEST_COMPLETE uint8 = iota
+	FCGI_CANT_MPX_CONN
+	FCGI_OVERLOADED
+	FCGI_UNKNOWN_ROLE
+)
+
+const (
+	FCGI_MAX_CONNS  string = "MAX_CONNS"
+	FCGI_MAX_REQS   string = "MAX_REQS"
+	FCGI_MPXS_CONNS string = "MPXS_CONNS"
+)
+
+const (
+	maxWrite = 65500 // 65530 may work, but for compatibility
+	maxPad   = 255
+)
