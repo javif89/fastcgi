@@ -33,7 +33,7 @@ through the code yourself first, here is where to start:
 
 `request.go`: Everything related to packet/record structure and encoding.
 
-If you start at the `Forward` function in `fastcgi.go`, you should be able
+If you start at the `Forward` function in `main.go`, you should be able
 to follow the rest of the process from there. If you get confused, I'll
 leave an explanation down below.
 
